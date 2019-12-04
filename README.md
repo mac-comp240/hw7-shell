@@ -104,11 +104,11 @@ Implement the following built-in commands. This means that you should not run
 them as external processes, but rather capture the command and use your own code
 to execute the described functionality.
 
-`exit` - terminate your shell input loop
-`myinfo` - print out your PID and PPID (parent process ID--the ID of the process
-that started this process) in a readable format
-`cd` - change your working directory to `$HOME`
-`cd <dir>` - change your working directory to `<dir>`
+* `exit` - terminate your shell input loop
+* `myinfo` - print out your PID and PPID (parent process ID--the ID of the process
+* that started this process) in a readable format
+* `cd` - change your working directory to `$HOME`
+* `cd <dir>` - change your working directory to `<dir>`
 
 Reference: `chdir(2)`, `getenv(3)`, `getpid(2)`, `getppid(2)`
 
