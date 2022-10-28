@@ -1,7 +1,7 @@
 # Writing a Shell
 
-In this assignment, you will create a program, `shell.c`, that implements a
-command-line interface for running programs, similar to bash or zsh, which you
+In this assignment, you will create a program, `shell.c`, which implements a
+command-line interface for running programs, similar to bash, which you
 have been using for this course.
 
 Your program will need to loop, reading commands from the user, and use C
@@ -23,10 +23,10 @@ pseudocode to real code.
 This assignment has multiple parts that you will need to implement for full
 credit, each described below. 
 
-If you complete the first four parts successfully, you will receive an A-
-(90/100) on this assignment. To receive a 100/100, you will need to complete
+If you complete the first four parts successfully, you will receive a B
+(85/100) on this assignment. To receive a 100/100, you will need to complete
 everything described below. I want you to prioritize--complete as much as you
-can, but be willing to accept the A- if you need more time for other
+can, and be willing to accept the B if you need more time for other
 end-of-semester considerations!
 
 Each task includes a reference to the C function and/or Unix system call that
