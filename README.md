@@ -23,7 +23,7 @@ pseudocode to real code.
 This assignment has multiple parts that you will need to implement for full
 credit, each described below. 
 
-If you complete the first four parts successfully, you will receive a B
+If you complete the first five parts successfully, you will receive a B
 (85/100) on this assignment. To receive a 100/100, you will need to complete
 everything described below. I want you to prioritize--complete as much as you
 can, and be willing to accept the B if you need more time for other
@@ -38,11 +38,10 @@ command line:
      man 2 fork
 ```
 
-If you get stuck on a particular step, you
-can try faking it and demonstrating that the rest is working. For example,
-if you aren't able to tokenize user input in step 3, you might hard code a
-pre-tokenized array to demonstrate your completion of step 4. Please clearly
-indicate any work that you have faked.
+If you get stuck on a particular step, you can try faking it and demonstrating
+that the rest is working. For example, if you aren't able to tokenize user input
+in step 3, you might hard code a pre-tokenized array to demonstrate your
+completion of step 4. Please clearly indicate any work that you have faked.
 
 # Tasks
 
@@ -115,8 +114,8 @@ them as external processes, but rather capture the command and use your own code
 to execute the described functionality.
 
 * `exit` - terminate your shell input loop
-* `myinfo` - print out your PID and PPID (parent process ID--the ID of the process
-* that started this process) in a readable format
+* `myinfo` - print out your PID and PPID (parent process ID--the ID of the
+  process that started this process) in a readable format
 * `cd` - change your working directory to `$HOME`
 * `cd <dir>` - change your working directory to `<dir>`
 
@@ -138,8 +137,8 @@ waiting for the child to return. At the start of the loop in `main`, you will
 need to do the following before displaying the user prompt:
 
 * Check if any children have completed their execution and 'died'--these are
-known as zombie processes. You will need to manually clean them up, a process
-known as reaping
+  known as zombie processes. You will need to manually clean them up, a process
+  known as reaping
 * Reap the zombie children
 * Display a message to the user that the processes have been reaped
 
@@ -218,6 +217,5 @@ You should deliver:
 
 ## Thanks
 
-Thanks to the Oberlin College Computer Science Department, where I originally
-completed this assignment as a student, Professor Ben Kuperman for
-developing it, and Professor Roberto Hoyle for his additional modifications.
+Thanks to Professor Ben Kuperman for developing the original version of this
+assignment and Professor Roberto Hoyle for his additional modifications.
