@@ -30,8 +30,15 @@ can, and be willing to accept the B if you need more time for other
 end-of-semester considerations!
 
 Each task includes a reference to the C function and/or Unix system call that
-could help you implement that task. If you get stuck on a particular step, you
-can try faking it and demonstrating that the rest is working. Please clearly
+could help you implement that task. You can use these to find the man page. For
+example, bring up the man page for `fork(2)` by typing the following in the
+command line:
+    man 2 fork
+
+If you get stuck on a particular step, you
+can try faking it and demonstrating that the rest is working. For example,
+if you aren't able to tokenize user input in step 3, you might hard code a
+pre-tokenized array to demonstrate your completion of step 4. Please clearly
 indicate any work that you have faked.
 
 # Tasks
