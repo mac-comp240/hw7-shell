@@ -33,7 +33,10 @@ Each task includes a reference to the C function and/or Unix system call that
 could help you implement that task. You can use these to find the man page. For
 example, bring up the man page for `fork(2)` by typing the following in the
 command line:
-        man 2 fork
+
+```
+     man 2 fork
+```
 
 If you get stuck on a particular step, you
 can try faking it and demonstrating that the rest is working. For example,
