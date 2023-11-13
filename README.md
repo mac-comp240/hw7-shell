@@ -214,6 +214,9 @@ You should deliver:
       in which you've clearly indicated which parts you have completed and which
       parts you have not
     * Any known bugs/errors with your code
+    * Include links to and descriptions of any external sources from which you
+      got significant help (this is in **addition** to including those links and
+      pseudocode in the code files)
 
 ## Thanks
 
