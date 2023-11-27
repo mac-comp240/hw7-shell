@@ -45,8 +45,7 @@ completion of step 4. Please clearly indicate any work that you have faked.
 
 # Tasks
 
-For many of the below tasks, you should plan to use the `PATH` variable that is
-inherited from the environment.
+For the below tasks, you might find it useful to get and set environment variables such as `$PATH` or `$PWD`.
 
 Reference: `getenv(3)`
 
