@@ -185,7 +185,7 @@ completed all other parts of the assignment.
 # Programming Notes
 
 * Your program needs to handle input lines up to 1024 characters
-* You may assume/limit the number of background processes
+* You may assume there are no more than 100 background processes
 * You may assume there are no more than 100 tokens (words) on a line
 * You may assume there are no more than 10 command segments on the command line
 
