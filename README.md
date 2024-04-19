@@ -104,7 +104,7 @@ assignment--for this task, you only have to support commands with more than one
 token, so being able to run a program that takes an argument is sufficient for
 this. I suggest you try `sort` or `cat` for testing.
 
-Reference: `fork(2)`, `execvp(2)`, `waitpid(2)`
+Reference: `fork(2)`, `execvp(3)`, `waitpid(2)`
 
 ## 5. Built-in commands
 
@@ -126,7 +126,7 @@ Trap `SIGINT` (triggered when the user enters Ctrl-C at the terminal) and have
 it terminate the currently running child process of the shell, if any, and **not
 the shell itself**.
 
-Reference: `signal(3)`, `kill(3)`
+Reference: `signal(2)`, `kill(3)`
 
 ## 7. Run background processes
 
