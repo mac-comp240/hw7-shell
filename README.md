@@ -126,7 +126,7 @@ Trap `SIGINT` (triggered when the user enters Ctrl-C at the terminal) and have
 it terminate the currently running child process of the shell, if any, and **not
 the shell itself**.
 
-Reference: `signal(2)`, `kill(3)`
+Reference: `signal(2)`, `kill(2)`, `getc(3)`
 
 ## 7. Run background processes
 
