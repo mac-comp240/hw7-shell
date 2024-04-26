@@ -126,6 +126,9 @@ Trap `SIGINT` (triggered when the user enters Ctrl-C at the terminal) and have
 it terminate the currently running child process of the shell, if any, and **not
 the shell itself**.
 
+Note: you will want to ensure that you are not specifying the use of the C99 standard
+in your Makefile.
+
 Reference: `signal(2)`, `kill(2)`, `getc(3)`
 
 ## 7. Run background processes
