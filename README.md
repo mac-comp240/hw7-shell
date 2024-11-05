@@ -59,7 +59,8 @@ This assignment has multiple parts that you will need to implement for full
 credit, each described below. 
 
 If you complete the first five parts successfully, you will receive a B
-(85/100) on this assignment. To receive a 100/100, you will need to complete everything described below. We want you to prioritize--complete as much as you
+(85/100) on this assignment. To receive a 100/100, you will need to complete 
+everything described below. We want you to prioritize--complete as much as you
 can, and be willing to accept the B if you need more time for other
 end-of-semester considerations!
 
@@ -79,7 +80,7 @@ that the rest is working. For example, if you aren't able to tokenize user input
 in step 3, you might hard code a pre-tokenized array to demonstrate your
 completion of step 4. 
 
-** When handing in the final product, you must clearly indicate any remaining 
+**When handing in the final product, you must clearly indicate any remaining 
 "faked" portions or bugs that you have not been able to resolve!**
 
 ## Tasks
