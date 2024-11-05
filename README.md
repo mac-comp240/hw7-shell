@@ -221,7 +221,7 @@ Reference: `waitpid(2)` with a PID of -1 and the `WNOHANG` option
 As an additional challenge, add in support to trap `SIGTSTP` (Ctrl-Z) and have
 it change the child program that is currently running into a background process.
 
-### Task 8. Output redirection
+### Task 8. Input and output redirection
 
 Support `<` and `>` for input and output redirection to the program. Do this by
 opening the requested file for read/write as needed and duping it to
