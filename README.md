@@ -84,6 +84,8 @@ completion of step 4.
 
 ## Tasks
 
+Before getting into the tasks, here are some guidelines to keep in mind.
+
 ### Programming Notes
 
 * Your program needs to handle input lines up to 1024 characters
@@ -110,7 +112,7 @@ For the below tasks, you might find it useful to get and set environment variabl
 
 Reference: `getenv(3)`
 
-### 1. Read user input
+### Task 1. Read user input
 
 Inside a loop in main(), present a prompt to the user and then read a full
 line of input (up to and including the newline character). Continue looping
@@ -119,7 +121,7 @@ the command line.
 
 Reference: `fgets(3)`
 
-### 2. Run a simple process
+### Task 2. Run a simple process
 
 Run a single word command line (e.g., `ls`) by forking a subprocess and
 executing it. You may assume the word is at the start of the line and that there
@@ -131,7 +133,7 @@ command: do nothing and go on to the next input prompt.
 
 Reference: `fork(2)`, `execvp(2)`, `waitpid(2)`
 
-### 3. Parse whitespace in commands
+### Task 3. Parse whitespace in commands
 
 Parse a command line with whitespace into a vector of strings. 
 
@@ -161,7 +163,7 @@ ls -a|grep foo>foo.txt
 
 Reference: `strtok(3)`, `strchr(3)`, `strsep(3)`, `strpbrk(3)`
 
-### 4. Run multi-token commands
+### Task 4. Run multi-token commands
 
 Take a vectorized multi-token command line from task 3, above, and run the
 program specified. Your shell should wait until the program completes before
@@ -175,7 +177,7 @@ this. I suggest you try `sort`, `cat`, `ls -a -l`, or similar commands for testi
 
 Reference: `fork(2)`, `execvp(3)`, `waitpid(2)`
 
-### 5. Built-in commands
+### Task 5. Built-in commands
 
 Implement the following built-in commands. This means that you should not run
 them as external processes, but rather capture the command and use your own code
@@ -189,7 +191,7 @@ to execute the described functionality.
 
 Reference: `chdir(2)`, `getenv(3)`, `getpid(2)`, `getppid(2)`
 
-### 6. Trap `SIGINT`
+### Task 6. Trap `SIGINT`
 
 Trap `SIGINT` (triggered when the user enters Ctrl-C at the terminal) and have
 it terminate the currently running child process of the shell, if any, and **not
@@ -200,7 +202,7 @@ in your Makefile.
 
 Reference: `signal(2)`, `kill(2)`, `getc(3)`
 
-### 7. Run background processes
+### Task 7. Run background processes
 
 If the last token on the command line is `&`, have that program run in the
 background instead of the foreground. The prompt should be redisplayed without
@@ -218,7 +220,7 @@ Reference: `waitpid(2)` with a PID of -1 and the `WNOHANG` option
 As an additional challenge, add in support to trap `SIGTSTP` (Ctrl-Z) and have
 it change the child program that is currently running into a background process.
 
-### 8. Output redirection
+### Task 8. Output redirection
 
 Support `<` and `>` for input and output redirection to the program. Do this by
 opening the requested file for read/write as needed and duping it to
@@ -226,7 +228,7 @@ opening the requested file for read/write as needed and duping it to
 
 Reference: `open(2)` or `fopen(3)`/`fileno(3)`, `dup2(2)`
 
-### 9. Piping
+### Task 9. Piping
 
 Support command line piping with a single pipe (the `|` character, on the same
 key as the backslash, above the return/enter key on most keyboards). For
