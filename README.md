@@ -41,7 +41,7 @@ what you need to produce for this assignment.
 You should deliver:
 * `shell.c`, which contains the C source code for your shell
 * `Makefile`, which will `make` and `make clean` your source code
-* `README.mb`, a new README that contains:
+* `README.md`, a new README that contains:
     * Your name and your partner's name, if any
     * A list of all the portions of the shell you were asked to complete, and
       in which you've clearly indicated which parts you have completed and which
@@ -156,7 +156,7 @@ args[5] = NULL;
 This part of the assignment can be  quite difficult, so be sure to test your
 work thoroughly.
 
-For additional challenge, handle parsing a command line where these symbols, > < & |,
+For an **optional** additional challenge, handle parsing a command line where these symbols, > < & |,
 may not be separated from the tokens around them with spaces. For example:
 ```
 ls -a|grep foo>foo.txt
@@ -166,7 +166,7 @@ Reference: `strtok(3)`, `strchr(3)`, `strsep(3)`, `strpbrk(3)`
 
 ### Task 4. Run multi-token commands
 
-Take a vectorized multi-token command line from task 3, above, and run the
+Take the `args` array created in task 3, above, and run the
 program specified. Your shell should wait until the program completes before
 displaying the next command prompt. I recommend creating a function that
 executes the program and returns the child process ID (PID). 
@@ -198,27 +198,31 @@ Trap `SIGINT` (triggered when the user enters Ctrl-C at the terminal) and have
 it terminate the currently running child process of the shell, if any, and **not
 the shell itself**.
 
-Note: you will want to ensure that you are not specifying the use of the C99 standard
-in your Makefile.
+**Note:** for this to work correctly, make sure your Makefile is **not** specifying the use of the C99 standard!
 
 Reference: `signal(2)`, `kill(2)`, `getc(3)`
 
 ### Task 7. Run background processes
 
 If the last token on the command line is `&`, have that program run in the
-background instead of the foreground. The prompt should be redisplayed without
-waiting for the child to return. At the start of the loop in `main`, you will
-need to do the following before displaying the user prompt:
+background instead of the foreground. This means that the shell program does not wait
+for the child to return, instead it just continues on right away.
 
-* Check if any children have completed their execution and 'died'--these are
-  known as zombie processes. You will need to manually clean them up, a process
-  known as reaping
-* Reap the zombie children
-* Display a message to the user that the processes have been reaped
+This task requires you to do the following:
+* After creating the `args` array, check to see if the last token is `&`. If so:
+    - Set a flag variable or somehow signal that this command is to be run as a background process
+    - Remove the `&` token from the `args` array
+* In the parent process code after performing a `fork` command:
+    - If the current command is a background one, then don't call `waitpid`
+* At the start of the loop in `main`, before displaying the user prompt, handle background child processes:
+    - Check if any children have completed their execution and 'died'--these are
+  known as zombie processes.
+    - Ensure that any zombie children have been reaped
+    - Display a message to the user that the processes have been reaped
 
 Reference: `waitpid(2)` with a PID of -1 and the `WNOHANG` option
 
-As an additional challenge, add in support to trap `SIGTSTP` (Ctrl-Z) and have
+As an **optional** additional challenge, add in support to trap `SIGTSTP` (Ctrl-Z) and have
 it change the child program that is currently running into a background process.
 
 ### Task 8. Input and output redirection
@@ -249,7 +253,7 @@ the start index of various command segments.
 
 Reference: `dup2(2)`, `pipe(2)`
 
-## Challenge
+## More Optional Challenges
 
 The following are challenge problems. Do not attempt them unless you have
 completed all other parts of the assignment.
