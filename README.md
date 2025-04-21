@@ -132,7 +132,7 @@ completes before continuing.
 Handle gracefully the case where the user types Enter/Return without typing any 
 command: do nothing and go on to the next input prompt.
 
-Reference: `fork(2)`, `execvp(2)`, `waitpid(2)`
+Reference: `fork(2)`, `execvp(3)`, `waitpid(2)`
 
 ### Task 3. Parse whitespace in commands
 
