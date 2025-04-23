@@ -200,7 +200,7 @@ the shell itself**.
 
 **Note:** for this to work correctly, make sure your Makefile is **not** specifying the use of the C99 standard!
 
-Reference: `signal(2)`, `kill(2)`, `getc(3)`
+Reference: `sigaction(2)`, `kill(2)`, `getc(3)`
 
 ### Task 7. Run background processes
 
